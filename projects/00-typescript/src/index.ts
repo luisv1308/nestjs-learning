@@ -1,5 +1,5 @@
 import { PokemonType, Pokemon, PokemonId } from './pokemon.types';
-import { getPokemonById } from './pokemon.utils';
+import { getPokemonById, findByProperty } from './pokemon.utils';
 
 const pokemon: Pokemon[] = [{
     id   : 1,
@@ -24,3 +24,6 @@ const missingId: PokemonId = 999;
 
 console.log(getPokemonById(pokemon, existingId));
 console.log(getPokemonById(pokemon, missingId));
+
+console.log(findByProperty(pokemon, 'name', 'Pikachu'));
+console.log(findByProperty(pokemon, 'id', existingId));
