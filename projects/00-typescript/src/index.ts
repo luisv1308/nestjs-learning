@@ -1,4 +1,5 @@
-import { PokemonType, Pokemon } from './pokemon.types';
+import { PokemonType, Pokemon, PokemonId } from './pokemon.types';
+import { getPokemonById } from './pokemon.utils';
 
 const pokemon: Pokemon[] = [{
     id   : 1,
@@ -17,4 +18,9 @@ const pokemon: Pokemon[] = [{
     hp   : 100,
 }];
 
-console.log(pokemon[0]);
+
+const existingId: PokemonId = 1;
+const missingId: PokemonId = 999;
+
+console.log(getPokemonById(pokemon, existingId));
+console.log(getPokemonById(pokemon, missingId));
