@@ -32,5 +32,9 @@ coverage/
 projects/**/prisma/*.db
 projects/**/prisma/*.db-journal
 
+# SQLite local databases
+projects/**/db/*.db
+projects/**/db/*.db-journal
+
 # Misc
 *.tsbuildinfo

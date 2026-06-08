@@ -89,7 +89,7 @@ No comenzar el proyecto final hasta completar todas las fases previas.
 | Fase | Estado |
 |------|--------|
 | 00-typescript | completada |
-| 01-sql | pendiente |
+| 01-sql | en progreso |
 | 02-prisma | pendiente |
 | 03-nest-basic | pendiente |
 | 04-nest-validation | pendiente |
@@ -121,7 +121,13 @@ No comenzar el proyecto final hasta completar todas las fases previas.
 
 ### 01-sql
 
-- [ ] _(se define al iniciar la fase)_
+- [x] Diseñar y crear tablas con `CREATE TABLE`
+- [ ] Insertar datos con `INSERT`
+- [ ] Consultar con `SELECT`, `WHERE` y `ORDER BY`
+- [ ] Unir tablas con `JOIN`
+- [ ] Modificar datos con `UPDATE` y `DELETE`
+- [ ] Agregar datos con funciones de agregación (`COUNT`, `GROUP BY`)
+- [ ] Documentar aprendizaje y errores comunes en README
 
 ### 02-prisma
 

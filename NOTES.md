@@ -2,14 +2,14 @@
 
 ## Fase actual
 
-`01-sql` — pendiente
+`01-sql` — en progreso
 
 ## Resumen por fase
 
 | Fase | Estado | Fecha inicio | Fecha fin |
 |------|--------|--------------|-----------|
 | 00-typescript | completada | 2026-06-03 | 2026-06-03 |
-| 01-sql | pendiente | — | — |
+| 01-sql | en progreso | 2026-06-03 | — |
 | 02-prisma | pendiente | — | — |
 | 03-nest-basic | pendiente | — | — |
 | 04-nest-validation | pendiente | — | — |
