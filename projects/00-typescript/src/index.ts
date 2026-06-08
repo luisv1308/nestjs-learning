@@ -1,5 +1,6 @@
 import { PokemonType, Pokemon, PokemonId } from './pokemon.types';
 import { getPokemonById, findByProperty } from './pokemon.utils';
+import { Pokedex } from './pokedex';
 
 const pokemon: Pokemon[] = [{
     id   : 1,
@@ -19,7 +20,7 @@ const pokemon: Pokemon[] = [{
 }];
 
 
-const existingId: PokemonId = 1;
+const existingId: PokemonId = 2;
 const missingId: PokemonId = 999;
 
 console.log(getPokemonById(pokemon, existingId));
@@ -27,3 +28,14 @@ console.log(getPokemonById(pokemon, missingId));
 
 console.log(findByProperty(pokemon, 'name', 'Pikachu'));
 console.log(findByProperty(pokemon, 'id', existingId));
+
+const pokedex = new Pokedex(pokemon);
+console.log(pokedex.getAll());
+console.log(pokedex.getById(existingId));
+pokedex.add({
+    id   : 4,
+    name : 'Squirtle',
+    types: [PokemonType.Water],
+    hp   : 100,
+});
+console.log(pokedex.getAll());
