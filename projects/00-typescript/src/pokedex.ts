@@ -1,5 +1,5 @@
 import { Pokemon, PokemonId } from "./pokemon.types";
-import { getPokemonById } from "./pokemon.utils";
+import { getPokemonById, findByProperty } from "./pokemon.utils";
 
 class Pokedex {
     private pokemons: Pokemon[] = [];
@@ -22,6 +22,10 @@ class Pokedex {
                 resolve(this.getById(id));
             }, 1000);
         });
+    }
+
+    findByProperty(key: keyof Pokemon, value: any): Pokemon | undefined {
+        return findByProperty(this.pokemons, key, value);
     }
 
     add(pokemon: Pokemon): void {

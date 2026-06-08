@@ -2,13 +2,13 @@
 
 ## Fase actual
 
-`00-typescript` — en progreso
+`01-sql` — pendiente
 
 ## Resumen por fase
 
 | Fase | Estado | Fecha inicio | Fecha fin |
 |------|--------|--------------|-----------|
-| 00-typescript | en progreso | 2026-06-03 | — |
+| 00-typescript | completada | 2026-06-03 | 2026-06-03 |
 | 01-sql | pendiente | — | — |
 | 02-prisma | pendiente | — | — |
 | 03-nest-basic | pendiente | — | — |
@@ -26,8 +26,16 @@
 
 ### 00-typescript
 
-_(pendiente)_
+- Enum, interface y type alias para modelar dominio.
+- Funciones con retorno `T | undefined` y genéricos con `keyof`.
+- Clases con propiedades `private` y métodos tipados.
+- `Promise<T>` vs valor directo; `async/await` para operaciones lentas.
+- Organización en módulos separados por responsabilidad.
 
 ## Errores comunes
 
-_(se registran al cerrar cada fase)_
+### 00-typescript
+
+- `Cannot find name 'console'` → faltaba `@types/node`.
+- Imports sin usar → aviso del compilador en modo strict.
+- Confundir `Promise<T>` con `T` → hay que usar `await`.

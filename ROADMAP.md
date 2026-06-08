@@ -88,7 +88,7 @@ No comenzar el proyecto final hasta completar todas las fases previas.
 
 | Fase | Estado |
 |------|--------|
-| 00-typescript | en progreso |
+| 00-typescript | completada |
 | 01-sql | pendiente |
 | 02-prisma | pendiente |
 | 03-nest-basic | pendiente |
@@ -109,15 +109,15 @@ No comenzar el proyecto final hasta completar todas las fases previas.
 
 ### 00-typescript
 
-- [ ] Configurar proyecto TypeScript (`tsconfig`, compilar sin errores)
-- [ ] Definir tipos primitivos, unions y enums en un dominio concreto
-- [ ] Crear interfaces y type aliases; saber cuándo usar cada uno
-- [ ] Tipar funciones (parámetros, retorno, opcionales)
-- [ ] Usar genéricos en al menos una función reutilizable
-- [ ] Crear una clase con propiedades tipadas y un método
-- [ ] Manejar `Promise` y `async/await` con tipos explícitos
-- [ ] Organizar código con módulos (`import` / `export`)
-- [ ] Ejecutar el proyecto con `npm run build` y `npm start`
+- [x] Configurar proyecto TypeScript (`tsconfig`, compilar sin errores)
+- [x] Definir tipos primitivos, unions y enums en un dominio concreto
+- [x] Crear interfaces y type aliases; saber cuándo usar cada uno
+- [x] Tipar funciones (parámetros, retorno, opcionales)
+- [x] Usar genéricos en al menos una función reutilizable
+- [x] Crear una clase con propiedades tipadas y un método
+- [x] Manejar `Promise` y `async/await` con tipos explícitos
+- [x] Organizar código con módulos (`import` / `export`)
+- [x] Ejecutar el proyecto con `npm run build` y `npm start`
 
 ### 01-sql
 

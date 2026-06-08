@@ -1,5 +1,4 @@
 import { PokemonType, Pokemon, PokemonId } from './pokemon.types';
-import { getPokemonById, findByProperty } from './pokemon.utils';
 import { Pokedex } from './pokedex';
 
 const pokemon: Pokemon[] = [{
@@ -19,18 +18,19 @@ const pokemon: Pokemon[] = [{
     hp   : 100,
 }];
 
-
-const existingId: PokemonId = 2;
-const missingId: PokemonId = 999;
-
+const pokedex = new Pokedex(pokemon);
+console.log('All pokemons:', pokedex.getAll().length);
+console.log('Pokemon by id 1:', pokedex.getById(1));
+console.log('Find by property name Charizard:', pokedex.findByProperty('name', 'Charizard'));
+pokedex.add({
+    id   : 4,
+    name : 'Squirtle',
+    types: [PokemonType.Water],
+    hp   : 100,
+});
+console.log('All pokemons:', pokedex.getAll().length);
 async function main() {
-    const pokedex = new Pokedex(pokemon);
-    
-    const foundPokemon = await pokedex.getByIdAsync(existingId);
-    console.log(foundPokemon);
-
-    const notFoundPokemon = await pokedex.getByIdAsync(missingId);
-    console.log(notFoundPokemon);
+    const notFoundPokemon = await pokedex.getByIdAsync(999);
+    console.log('Pokemon by id 999:', notFoundPokemon);
 }
-
 main().catch(console.error);
