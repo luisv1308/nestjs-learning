@@ -16,6 +16,14 @@ class Pokedex {
         return getPokemonById(this.pokemons, id);
     }
 
+    getByIdAsync(id: PokemonId): Promise<Pokemon | undefined> {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(this.getById(id));
+            }, 1000);
+        });
+    }
+
     add(pokemon: Pokemon): void {
         this.pokemons.push(pokemon);
     }

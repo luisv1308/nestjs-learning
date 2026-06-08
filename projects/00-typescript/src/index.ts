@@ -23,19 +23,14 @@ const pokemon: Pokemon[] = [{
 const existingId: PokemonId = 2;
 const missingId: PokemonId = 999;
 
-console.log(getPokemonById(pokemon, existingId));
-console.log(getPokemonById(pokemon, missingId));
+async function main() {
+    const pokedex = new Pokedex(pokemon);
+    
+    const foundPokemon = await pokedex.getByIdAsync(existingId);
+    console.log(foundPokemon);
 
-console.log(findByProperty(pokemon, 'name', 'Pikachu'));
-console.log(findByProperty(pokemon, 'id', existingId));
+    const notFoundPokemon = await pokedex.getByIdAsync(missingId);
+    console.log(notFoundPokemon);
+}
 
-const pokedex = new Pokedex(pokemon);
-console.log(pokedex.getAll());
-console.log(pokedex.getById(existingId));
-pokedex.add({
-    id   : 4,
-    name : 'Squirtle',
-    types: [PokemonType.Water],
-    hp   : 100,
-});
-console.log(pokedex.getAll());
+main().catch(console.error);
