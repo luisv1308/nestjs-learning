@@ -24,7 +24,7 @@ class Pokedex {
         });
     }
 
-    findByProperty(key: keyof Pokemon, value: any): Pokemon | undefined {
+    findByProperty<K extends keyof Pokemon>(key: K, value: Pokemon[K]): Pokemon | undefined {
         return findByProperty(this.pokemons, key, value);
     }
 
